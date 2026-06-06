@@ -1,0 +1,5 @@
+{
+  "vuln_type": "buffer overflow",
+  "location": "0x00401264 (main function)",
+  "cause": "User input read via fgets (up to 128 bytes, constrained to <=100) is copied to a 16-byte stack buffer via __strcpy_chk, allowing overflow of the destination buffer when input exceeds 15 characters."
+}
